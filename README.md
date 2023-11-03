@@ -4,19 +4,20 @@
 
 
 # CLAIMED - The Component Library for AI, Machine Learning, ETL, and Data Science
-
+---
 **TL;DR**
 - set of re-usable coarse-grained components (just a bunch of code)
 - think of tasks, not functions (e.g., read from a database, transform data, train model, deploy model, store result to cloud object storage)
-- write once, runs everywhere: Kubeflow, Apache Airflow, CLI, KNative, Docker, Kubernetes
-- orchestrate with anything: shell script, Kubeflow, Airflow, Argo, Tekton
+- write once, runs everywhere: Kubeflow, Docker/Podman, CLI, KNative, Kubernetes, CodeEngine
+- orchestrate with anything: shell script, Kubeflow, CWL, ...
 - persistence layer / queue agnostic: Cloud Object Storage, file systems, PVC, Kafka, MQTT
-- just use Python - no other skills required (no Kubeflow component YAML, maven, Java)
+- just use Python, bash or R - no other skills required (no Kubeflow component YAML, maven, Java, Dockerfile)
 - 1st class citizen in JupyterLab and the Elyra Pipeline Editor (creating a low code / no code IDE for data science)
 - upstream repository to IBM Watson Studio Pipelines contributed components in IBM Cloud Pak for Data
 
-You also might wanna have a look at our [FAQ](FAQ.md)
+[FAQ](FAQ.md)
 
+---
 
 CLAIMED is a operator component framework for artificial intelligence, machine learning, "extract, transform, load" processes, and data science. The goal is to enable low-code/no-code rapid prototyping style programming to seamlessly CI/CD into production. The open source CLAIMED component library provides ready-made components for various business domains, supports multiple computer languages, works on different data flow editors and command line tools, and runs on various execution engines including Kubernetes (Job), Knative (Pod), Kubeflow (KFP component) and on the CLI using docker or podman. In addition to the open source library, clients create their private operator libraries using in conjunction with the open source one.
 Core of CLAIMED is C3, the Claimed Component Compiler which takes source code in the form of jupyter notebooks or source files and compiles it to various target runtime environments, allowing to add additional targets as plugins. Currently, C3 supports python notebooks and python scripts as input and Kubernetes/OpenShift, Kubeflow Pipeline Components/RedHat OpenShift DataScience Pipelines, and plain docker/podmain (via CLAIMED CLI)
